@@ -72,7 +72,8 @@
             
         }
         .header_ {
-            border: 0.5px solid rgb(65,65,65);border-radius: 5px;width: 100svw; height: 30svh; align-content: center;
+            border: 0.5px solid rgb(65,65,65);border-radius: 5px;width: 80svw; height: 30svh; align-content: center;
+            margin: 0;
         }
         .home {
             width: 80svw;
@@ -82,7 +83,7 @@
         }
         .postit_field {
             width: 80%;
-            height: 20svh;
+            height: 80px;
             background-color: white;
             margin: 0;
             border: 1px solid rgb(65,65,65);
@@ -139,11 +140,11 @@
                     <h2>Login to post</h2>
                     <br>
                     <form method='GET' action="/login/">{% csrf_token %}
-                        <button style="color: rgb(255,255,255);background-color: rgb(50,80,240); border-color: rgb(90,120, 240);width: 25px;" type="submit">login</button>
+                        <button style="color: rgb(255,255,255);background-color: rgb(50,80,240); border-color: rgb(90,120, 240);width: 65px;" type="submit">login</button>
                     </form>
                     <br>
                     <form method="GET" action="/register/">{% csrf_token %}
-                        <button style="color: rgb(255,255,255);background-color: rgb(50,80,240); border-color: rgb(90,120, 240);width: 25px;" type="submit">register</button>
+                        <button style="color: rgb(255,255,255);background-color: rgb(50,80,240); border-color: rgb(90,120, 240);width: 65px;" type="submit">register</button>
 
                     </form>
 
@@ -162,7 +163,7 @@
                 
             </div>
             </a>
-            <div style="width: 90%;height: 80%; overflow: auto;">
+            <div style="width: 90%;height: 50%; overflow: auto;">
                 <p style="text-align: left;margin: 5px;">@{{x.username}}</p>
                 <p style="margin: 8px;">{{x.content}}</p>
             </div>
