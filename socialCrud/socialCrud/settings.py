@@ -7,7 +7,10 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv('DEBUG')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["https://socialcrud.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://socialcrud.onrender.com"]
+CSRF_ALLOWED_ORIGINS = ["https://socialcrud.onrender.com"]
+CORS_ORIGINS_WHITELIST = ["https://socialcrud.onrender.com"]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
