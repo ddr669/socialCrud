@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body {
+            display: grid;
+            background-color: rgb(200, 200, 200);
+            justify-content: center;
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        
+        input {
+            width: 60%;
+            border-color: rgba(255,255,255,0);
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div style="box-shadow: 10px -5px 22px rgba(0,0,0,0.5);text-align: center;justify-content: center;margin-top: 65px;width: 30svw; height: 60svh; background-color: aliceblue;">
+        <h1>Register</h1>
+
+        <form method="post" action="/register/">{% csrf_token %}
+            <label for="username">User: </label><br>
+            <input type="text" name="username" id="username" placeholder="username"/>
+            <br>
+            <label for="email">Email: </label><br>
+            <input type="email" name="email" id="email" placeholder="email@email.com"/>
+            <br>
+            <label for="password">Password: </label><br>
+            <input type="password" name="password" id="password" placeholder="*******"/>
+            <br>
+            <label for="password2">Verify password: </label><br>
+            <input type="password" name="password2" id="password2" placeholder="*******"/>
+            <br><br>
+            <button type="submit">register</button>
+        </form>
+       {% if password_failure %}
+            <p style="color: rgb(255,0,0); font-size:12px;">{{ password_failure }}</p>
+       {% endif %}
+       {% if email_failure %}
+            <p style="color: rgb(255,0,0); font-size:12px;">{{ email_failure }}</p>
+       {% endif %}
+    </div>
+
+</body>
+</html>
