@@ -18,13 +18,20 @@
             border-color: rgba(255,255,255,0);
             margin: 5px;
         }
-
+        .login_page {
+            text-align: center;margin-top: 65px;width: 30svw; height: 60svh; background-color: aliceblue;
+        }
+        @media (max-width: 600px){
+            .login_page {
+                text-align: center;width: 80%; height: 60svh; background-color: aliceblue;
+            }
+        }
 
     </style>
 </head>
 <body>
     
-    <div style="text-align: center;margin-top: 65px;width: 30svw; height: 60svh; background-color: aliceblue;">
+    <div class="login_page">
         <h1>Login</h1>
         <form method="post" action="/login/">{% csrf_token %}
             <label for="username">User: </label><br>

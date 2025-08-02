@@ -19,12 +19,20 @@
             border-color: rgba(255,255,255,0);
             margin: 5px;
         }
+        .register_page {
+            box-shadow: 10px -5px 22px rgba(0,0,0,0.5);text-align: center;justify-content: center;margin-top: 65px;width: 30svw; height: 60svh; background-color: aliceblue;
+        }
+        @media (max-width: 600px) {
+            .register_page {
+                box-shadow: 10px -5px 22px rgba(0,0,0,0.5);text-align: center;justify-content: center;width: 80%; height: 80svh; background-color: aliceblue;
+            }
+        }
 
     </style>
 </head>
 <body>
     
-    <div style="box-shadow: 10px -5px 22px rgba(0,0,0,0.5);text-align: center;justify-content: center;margin-top: 65px;width: 30svw; height: 60svh; background-color: aliceblue;">
+    <div class="register_page">
         <h1>Register</h1>
 
         <form method="post" action="/register/">{% csrf_token %}
