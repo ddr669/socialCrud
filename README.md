@@ -2,7 +2,7 @@
 
 A API/webservice to create, read, update, delete using Django, a python framework simple to use and fully of functionality like ORM/DRM and rest-framework to APIs.  
 
-![link: https://socialcrud.onrender.com/homepage](https://socialcrud.onrender.com/homepage)
+[link: https://socialcrud.onrender.com/homepage](https://socialcrud.onrender.com/homepage)
 
 some path:  
 homepage/ - web  
