@@ -21,7 +21,8 @@
         margin-right: 0;
         padding-top: 20px;
         width: 105svh;
-        height: 120%;
+        justify-content: center;
+        height: fit-content;
         background-color: aliceblue;
     }
     .postit_list {
@@ -77,8 +78,9 @@
         }
         .home {
             width: 80svw;
-            height: 100%;
+            height: fit-content;
             margin: 0;
+            justify-content: center;
             background-color: aliceblue;
         }
         .postit_field {
@@ -153,27 +155,28 @@
             {% endif %}
         </div>
 
-    <ul class="postit_list">
-    {% for x in posts  %}
-    <div class="postit_field">
-        <li class="postit_area">
-            <a class="link_postit" href="/home/{{x.id}}">
-            <div style="height: 5svh;background-color: rgb(50,80,240);border: 0.5px solid rgb(65,65,65); border-radius: 5px;">
-                <p style="text-align: left;margin: 5px;color: rgb(255,255,255)">{{x.title}}</p>
+        <ul class="postit_list">
+        {% for x in posts  %}
+        <div class="postit_field">
+            <li class="postit_area">
+                <a class="link_postit" href="/home/{{x.id}}">
+                <div style="height: 5svh;background-color: rgb(50,80,240);border: 0.5px solid rgb(65,65,65); border-radius: 5px;">
+                    <p style="text-align: left;margin: 5px;color: rgb(255,255,255)">{{x.title}}</p>
                 
-            </div>
-            </a>
+                </div>
+                </a>
+
+                <div style="width: 90%;height: 100%; overflow: auto;">
+                    <p style="text-align: left;margin: 5px;">@{{x.username}}</p>
             
-            <p style="text-align: left;margin: 5px;">@{{x.username}}</p>
-            <div style="width: 90%;height: 100%; overflow: auto;"></div>
-                <p style="margin: 8px;">{{x.content}}</p>
-            </div>
+                    <p style="margin: 8px;">{{x.content}}</p>
+                </div>
             
        
-    </div>
-    {% endfor %}
-    </ul>
-    <br><br>
+        </div>
+        {% endfor %}
+        </ul>
+        <br><br>
     </div>
 
     </script>
